@@ -1,4 +1,7 @@
-import React from "react";
+// import { ChartLine, Clock3, House } from "lucide";
+
+
+import { ChartLine, Clock3, House } from "lucide-react";
 import { NavLink } from "react-router";
 
 const Navbar = () => {
@@ -42,13 +45,13 @@ const Navbar = () => {
                 className="menu menu-sm dropdown-content  font-medium rounded-box z-1 top-15 w-52 p-2 shadow right-[0] light-blue"
               >
                 <li>
-                <NavLink to={"/"}>Home</NavLink>
+                <NavLink to={"/"}><House size={15}/> Home</NavLink>
               </li>
               <li>
-                <NavLink to={"/timeLine"}>Timeline</NavLink>
+                <NavLink to={"/timeLine"}><Clock3 size={15}/> Timeline</NavLink>
               </li>
               <li>
-                <NavLink to={"/status"}>Stats</NavLink>
+                <NavLink to={"/status"}><ChartLine size={15}/> Stats</NavLink>
               </li>
               </ul>
             </div>
@@ -56,13 +59,13 @@ const Navbar = () => {
 
             <ul className="hidden gap-5  md:flex light-blue font-medium">
               <li>
-                <NavLink to={"/"}>Home</NavLink>
+                <NavLink to={"/"}><House size={18}/> Home</NavLink>
               </li>
               <li>
-                <NavLink to={"/timeLine"}>Timeline</NavLink>
+                <NavLink to={"/timeLine"}> <Clock3 size={18}/> Timeline</NavLink>
               </li>
               <li>
-                <NavLink to={"/status"}>Stats</NavLink>
+                <NavLink to={"/status"}><ChartLine size={18}/> Stats</NavLink>
               </li>
             </ul>
           </ul>
