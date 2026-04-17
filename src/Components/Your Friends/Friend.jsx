@@ -1,14 +1,14 @@
 import React from "react";
 
 const Friend = ({ friendData }) => {
-//   console.log(friendData);
-  const { id, name, picture, days_since_contact, status, tags } = friendData;
+
+  const { name, picture, days_since_contact, status, tags } = friendData;
   console.log(picture)
   return (
     <>
-      <div className="card  bg-base-100 border card-md shadow-sm">
-        <div className="card-body">
-          <div className="">
+      <div className="card  bg-base-100  card-md shadow-lg">
+        <div className="card-body" >
+          <div>
             <img src={picture} className="w-[65px] mx-auto rounded-4xl " alt="image" />
           </div>
           <p className="text-center text-[20px] font-semibold dark-blue">

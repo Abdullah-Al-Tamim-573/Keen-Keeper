@@ -7,7 +7,7 @@ const YourFriends = ({ friendsDataPromise }) => {
   return (
     <>
     <div>
-          <h2 className="dark-blue font-semibold text-2xl my-5">
+          <h2 className="dark-blue font-semibold text-2xl mt-13 mb-5 text-center md:text-left">
                Your Friends
           </h2>
     </div>

@@ -3,6 +3,7 @@
 import { Outlet } from 'react-router'
 import './App.css'
 import Navbar from './Components/Shred Components/Navbar/Navbar'
+import Footer from './Components/Shred Components/Footer/Footer'
 
 function App() {
  
@@ -16,6 +17,10 @@ function App() {
         <main className='geist max-w-[95%] md:max-w-[75%] mx-auto'>
               <Outlet></Outlet>
         </main>
+
+        <footer>
+            <Footer></Footer>
+        </footer>
    </>
   )
 }
