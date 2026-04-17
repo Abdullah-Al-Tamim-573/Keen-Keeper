@@ -13,7 +13,7 @@ function App() {
                 <Navbar></Navbar>
         </header>
 
-        <main className='geist'>
+        <main className='geist max-w-[95%] md:max-w-[75%] mx-auto'>
               <Outlet></Outlet>
         </main>
    </>

@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "David Kim",
+    "picture": "https://randomuser.me/api/portraits/men/11.jpg",
+    "email": "david.kim@gmail.com",
+    "days_since_contact": 20,
+    "status": "overdue",
+    "tags": ["work"],
+    "bio": "Worked together on a product launch project. Very reliable teammate.",
+    "goal": 14,
+    "next_due_date": "2025-07-10"
+  },
+  {
+    "id": 2,
+    "name": "Emma Wilson",
+    "picture": "https://randomuser.me/api/portraits/women/12.jpg",
+    "email": "emma.wilson@gmail.com",
+    "days_since_contact": 15,
+    "status": "overdue",
+    "tags": ["family"],
+    "bio": "Cousin. We used to spend holidays together growing up.",
+    "goal": 14,
+    "next_due_date": "2025-07-12"
+  },
+  {
+    "id": 3,
+    "name": "Lisa Nakamura",
+    "picture": "https://randomuser.me/api/portraits/women/13.jpg",
+    "email": "lisa.nakamura@gmail.com",
+    "days_since_contact": 16,
+    "status": "overdue",
+    "tags": ["work"],
+    "bio": "Met at a tech conference. We often exchange ideas about design.",
+    "goal": 14,
+    "next_due_date": "2025-07-11"
+  },
+  {
+    "id": 4,
+    "name": "James Wright",
+    "picture": "https://randomuser.me/api/portraits/men/14.jpg",
+    "email": "james.wright@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["hobby", "travel"],
+    "bio": "Travel buddy. We went on a backpacking trip last year.",
+    "goal": 14,
+    "next_due_date": "2025-07-09"
+  },
+  {
+    "id": 5,
+    "name": "Sophia Turner",
+    "picture": "https://randomuser.me/api/portraits/women/15.jpg",
+    "email": "sophia.turner@gmail.com",
+    "days_since_contact": 10,
+    "status": "almost due",
+    "tags": ["work"],
+    "bio": "Teammate from current job. Great at communication.",
+    "goal": 14,
+    "next_due_date": "2025-07-20"
+  },
+  {
+    "id": 6,
+    "name": "Noah Martinez",
+    "picture": "https://randomuser.me/api/portraits/men/16.jpg",
+    "email": "noah.martinez@gmail.com",
+    "days_since_contact": 6,
+    "status": "on-track",
+    "tags": ["family"],
+    "bio": "Uncle’s son. We catch up regularly over phone.",
+    "goal": 10,
+    "next_due_date": "2025-07-25"
+  },
+  {
+    "id": 7,
+    "name": "Olivia Brown",
+    "picture": "https://randomuser.me/api/portraits/women/17.jpg",
+    "email": "olivia.brown@gmail.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["work"],
+    "bio": "Joined the company recently. Friendly and helpful.",
+    "goal": 10,
+    "next_due_date": "2025-07-26"
+  },
+  {
+    "id": 8,
+    "name": "Liam Anderson",
+    "picture": "https://randomuser.me/api/portraits/men/18.jpg",
+    "email": "liam.anderson@gmail.com",
+    "days_since_contact": 13,
+    "status": "almost due",
+    "tags": ["hobby"],
+    "bio": "Met at a photography workshop. Shares similar interests.",
+    "goal": 14,
+    "next_due_date": "2025-07-21"
+  },
+  {
+    "id": 9,
+    "name": "Ava Johnson",
+    "picture": "https://randomuser.me/api/portraits/women/19.jpg",
+    "email": "ava.johnson@gmail.com",
+    "days_since_contact": 17,
+    "status": "overdue",
+    "tags": ["travel"],
+    "bio": "Met during a group tour. Loves exploring new places.",
+    "goal": 14,
+    "next_due_date": "2025-07-13"
+  },
+  {
+    "id": 10,
+    "name": "Ethan Clark",
+    "picture": "https://randomuser.me/api/portraits/men/20.jpg",
+    "email": "ethan.clark@gmail.com",
+    "days_since_contact": 4,
+    "status": "on-track",
+    "tags": ["hobby", "fitness"],
+    "bio": "Gym partner. Keeps pushing me to stay consistent.",
+    "goal": 10,
+    "next_due_date": "2025-07-27"
+  }
+]
