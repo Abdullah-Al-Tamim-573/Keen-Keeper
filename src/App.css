@@ -1,0 +1,24 @@
+/* shred color */
+.light-dark-green {
+    color: #244d3f;
+}
+
+.bg-light-dark-green {
+   color: white;
+   background-color: #244d3f;
+}
+
+.dark-blue {
+    color: #1F2937;
+}
+
+
+.light-blue {
+    color: #64748B;
+}
+
+
+a.active {
+     color: white;
+   background-color: #244d3f;
+}
