@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Friend = ({ friendData }) => {
 
-  const { name, picture, days_since_contact, status, tags } = friendData;
-  console.log(picture)
+  const {id, name, picture, days_since_contact, status, tags } = friendData;
+  
   return (
-    <>
+    <Link to={`/${id}`}>
       <div className="card  bg-base-100  card-md shadow-lg">
         <div className="card-body" >
           <div>
@@ -30,7 +31,7 @@ const Friend = ({ friendData }) => {
           </p>
         </div>
       </div>
-    </>
+    </Link>
   );
 };
 
