@@ -13,7 +13,7 @@ const HomePage = () => {
                   <Banner></Banner>
                   <StatsBoxes></StatsBoxes>
 
-                  <Suspense fallback={<h3>Friends Data Loading please wait........</h3>}>
+                  <Suspense fallback={<div className='text-center min-h-[20vh] md:min-h-[50vh] flex justify-center items-center'><div className="loading loading-spinner loading-xl"></div></div>}>
                             <YourFriends friendsDataPromise={friendsDataPromise}></YourFriends>
                   </Suspense>
                   

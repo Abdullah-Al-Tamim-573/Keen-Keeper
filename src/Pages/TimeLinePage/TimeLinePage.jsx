@@ -40,6 +40,14 @@ const TimeLinePage = () => {
           </ul>
         </div>
       </div>
+
+      {/* timeline cards */}
+      <div>
+            {/* card */}
+             <div className="border">
+                    
+             </div>
+      </div>
     </>
   );
 };
