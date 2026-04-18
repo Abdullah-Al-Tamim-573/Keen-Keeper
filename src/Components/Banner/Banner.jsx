@@ -4,7 +4,7 @@ import React from "react";
 const Banner = () => {
   return (
     <>
-      <div className="hero my-5 md:my-10">
+      <div className="hero my-5 md:my-15">
         <div className="hero-content text-center">
           <div className="">
             <h1 className="text-3xl md:text-5xl font-bold dark-blue">
