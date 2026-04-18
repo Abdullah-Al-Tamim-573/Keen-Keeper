@@ -5,18 +5,30 @@ export let FriendsDataContext = createContext()
  const Context = ({children}) => {
 
     let [friendsData, setFriendsData] = useState([]);
+    let [copyArry  , setCopyArry] = useState([]);
+
+
+    let handleFiterOutFriendsActions = (filterAction) => {
+        
+        
+         let filterFriendsAction = copyArry.filter(filterData => filterData.clickAction === filterAction);
+        
+         setFriendsData(filterFriendsAction)
+    }
+
+    
 
     
 
     let handleFriendsData = (findTargetFriend, clickAction) => {
-        //  console.log(findTargetFriend)
-        //  console.log(clickAction)
+        
 
          let changeFriendDataObj = {
                 clickAction,
               ...findTargetFriend
 
          }
+         setCopyArry([...copyArry, changeFriendDataObj])
 
          setFriendsData([...friendsData, changeFriendDataObj])
 
@@ -28,7 +40,8 @@ export let FriendsDataContext = createContext()
 
     let data = {
         handleFriendsData,
-        friendsData
+        friendsData,
+        handleFiterOutFriendsActions
     }
 
     return (

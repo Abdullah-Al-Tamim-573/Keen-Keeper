@@ -22,7 +22,7 @@ const FriendDetails = () => {
   let findTargetFriend = friendsData.find((friend) => friend.id === params);
   
 
-  let {id, name, picture, email, days_since_contact, goal, next_due_date
+  let {name, picture, email, days_since_contact, goal, next_due_date
 ,status, tags, bio} = findTargetFriend;
 const formattedDate = new Date(next_due_date).toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' });
 
