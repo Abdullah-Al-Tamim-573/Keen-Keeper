@@ -15,6 +15,10 @@ const FriendDetails = () => {
   let friendsData = useLoaderData();
 
   let findTargetFriend = friendsData.find((friend) => friend.id === params);
+  console.log(findTargetFriend);
+
+  let {id, name, picture, email, days_since_contact, goal, next_due_date
+,status, tags, bio} = findTargetFriend;
 
   return (
     <>
@@ -22,26 +26,34 @@ const FriendDetails = () => {
         {/* 1st part box */}
         <div className="flex flex-col gap-3 items-center">
           {/* 1st box */}
-          <div className="card border w-full md:w-80  shadow-sm py-7">
+          <div className="card  w-full md:w-80  shadow-sm py-7">
             <figure>
-              <img src="Ellipse1.png" alt="Shoes" />
+              <img src={picture} alt={name} className="rounded-full"/>
             </figure>
             <div className="card-body">
-              <h2 className="card-title justify-center">Emma Wilson</h2>
+              <h2 className="card-title justify-center">{name}</h2>
               <p
-                className={`text-white bg-[#EF4444] text-center w-fit px-4  rounded-4xl mx-auto font-medium text-[14px]`}
+                className={`text-white ${status === 'almost due'? 'bg-[#EFAD44]': status==='overdue'? 'bg-[#EF4444]': 'bg-[#244D3F]'} text-center w-fit px-4  rounded-4xl mx-auto font-medium text-[14px]`}
               >
-                Overdue
+                {status}
               </p>
-              <p className="light-dark-green w-fit mx-auto  bg-[#CBFADB]  font-medium text-[13px] px-4  rounded-4xl">
-                family
-              </p>
+                <div className="flex gap-1  items-center w-fit mx-auto">
+                     {
+                        tags.map((tag, i) =>  
+                        <p key={i} className="light-dark-green w-fit mx-auto  bg-[#CBFADB]  font-medium text-[13px] px-4  rounded-4xl">
+                              {
+                                tag
+                              }
+                         </p>
+              )
+                     }
+                </div>
               <p className="light-blue font-medium text-center italic">
-                "Former colleague, great mentor"
+                "{bio}"
               </p>
               <div className="card-actions justify-end">
                 <p className="light-blue text-[14px] text-center">
-                  Preferred: email
+                  Preferred: {email}
                 </p>
               </div>
             </div>
@@ -63,14 +75,14 @@ const FriendDetails = () => {
         </div>
 
         {/* 2nd part box */}
-        <div className="border w-full flex flex-col gap-4 ">
+        <div className="shadow-xl w-full flex flex-col gap-4 ">
           {/* status boxes */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {/* 1st box */}
-            <div className="card bg-base-100 border  card-md shadow-sm">
+            <div className="card bg-base-100  card-md shadow-sm">
               <div className="card-body">
                 <h2 className="text-2xl  light-dark-green text-center font-semibold">
-                  62
+                  {days_since_contact}
                 </h2>
                 <p className="text-center text-[1rem] light-blue">
                   Days Since Contact
@@ -78,10 +90,10 @@ const FriendDetails = () => {
               </div>
             </div>
             {/* 2nd box  */}
-            <div className="card  bg-base-100 border card-md shadow-sm">
+            <div className="card  bg-base-100 card-md shadow-sm">
               <div className="card-body">
                 <h2 className="text-2xl light-dark-green text-center font-semibold">
-                  30
+                  {goal}
                 </h2>
                 <p className="text-center text-[1rem] light-blue">
                   Goal (Days)
@@ -89,10 +101,13 @@ const FriendDetails = () => {
               </div>
             </div>
             {/* 3rd box */}
-            <div className="card  bg-base-100 border  card-md shadow-sm">
+            <div className="card  bg-base-100  card-md shadow-sm">
               <div className="card-body">
                 <h2 className="text-2xl  light-dark-green text-center font-semibold">
-                  Feb 27, 2026
+                  {/* Feb 27, 2026 */}
+                  {
+                    next_due_date
+                  }
                 </h2>
                 <p className="text-center text-[1rem] light-blue">Next Due</p>
               </div>
@@ -100,14 +115,14 @@ const FriendDetails = () => {
           </div>
 
           {/* Relationship Goal box */}
-          <div className="border flex justify-between p-6 rounded-xl">
+          <div className="shadow-sm flex justify-between p-6 rounded-xl">
             <div className="space-y-1">
               <h4 className="font-medium text-xl light-dark-green">
                 Relationship Goal
               </h4>
               <p className="light-blue text-[17px]">
                 Connect every{" "}
-                <span className="dark-blue font-bold">30 days</span>
+                <span className="dark-blue font-bold">{goal} days</span>
               </p>
             </div>
             <div>
@@ -115,7 +130,7 @@ const FriendDetails = () => {
             </div>
           </div>
           {/* Quick Check-In box */}
-          <div className="border p-6 ">
+          <div className="shadow-sm rounded-xl p-6 ">
             <h4 className="text-xl font-medium">Quick Check-In</h4>
 
             {/* Action Cards box */}
