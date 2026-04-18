@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLoaderData, useParams } from "react-router";
 import { RiNotificationSnoozeLine } from "react-icons/ri";
 import { PiArchiveBold } from "react-icons/pi";
@@ -6,6 +6,8 @@ import { RiDeleteBin6Line } from "react-icons/ri";
 import { BiPhoneCall } from "react-icons/bi";
 import { MdOutlineTextsms } from "react-icons/md";
 import { IoVideocamOutline } from "react-icons/io5";
+import { toast } from "react-toastify";
+import { FriendsDataContext} from "../../../Context/Context";
 
 
 
@@ -13,9 +15,12 @@ import { IoVideocamOutline } from "react-icons/io5";
 const FriendDetails = () => {
   let params = Number(useParams().id);
   let friendsData = useLoaderData();
+  let contextData = useContext(FriendsDataContext);
+  let {handleFriendsData} = contextData;
+ 
 
   let findTargetFriend = friendsData.find((friend) => friend.id === params);
-  console.log(findTargetFriend);
+  
 
   let {id, name, picture, email, days_since_contact, goal, next_due_date
 ,status, tags, bio} = findTargetFriend;
@@ -137,14 +142,30 @@ const formattedDate = new Date(next_due_date).toLocaleDateString('en-US', { mont
             {/* Action Cards box */}
             <div className="flex gap-2 py-10">
               <div className="w-full">
-                <button className="btn w-full flex flex-col gap-1 p-5 md:p-7 lg:p-10">
+                <button onClick={() => {
+                  toast.success(`SuccessFully Call with ${name}`, {
+                    position: "top-center"
+
+                  })
+                  handleFriendsData(findTargetFriend, 'call')
+                }} className="btn w-full flex flex-col gap-1 p-5 md:p-7 lg:p-10">
                     <span><BiPhoneCall size={24} color="black"/></span> Call</button>
               </div>
               <div className="w-full">
-                <button className="btn flex flex-col w-full gap-1 p-5 md:p-7 lg:p-10"> <span><MdOutlineTextsms size={24}/></span> Text</button>
+                <button onClick={() => {
+                    toast.success(`SuccessFully Text with ${name}`, {
+                    position: "top-center"
+                  })
+                  handleFriendsData(findTargetFriend, 'text')
+                }} className="btn flex flex-col w-full gap-1 p-5 md:p-7 lg:p-10"> <span><MdOutlineTextsms size={24}/></span> Text</button>
               </div>
               <div className="w-full">
-                <button className="btn  w-full gap-1 p-5 md:p-7 lg:p-10 flex flex-col">
+                <button onClick={() => {
+                  toast.success(`SuccessFully Video Call With ${name}`, {
+                    position: "top-center"
+                  })
+                  handleFriendsData(findTargetFriend, 'video')
+                }} className="btn  w-full gap-1 p-5 md:p-7 lg:p-10 flex flex-col">
                     <span><IoVideocamOutline size={24} /></span> Video</button>
               </div>
             </div>

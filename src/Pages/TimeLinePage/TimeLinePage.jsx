@@ -1,11 +1,15 @@
 import { IoVideocamOutline } from "react-icons/io5";
 import { BiPhoneCall } from "react-icons/bi";
-import React from "react";
+import React, { useContext } from "react";
 
 import { MdOutlineTextsms } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
+import { FriendsDataContext } from "../../Context/Context";
 
 const TimeLinePage = () => {
+  let contextData = useContext(FriendsDataContext);
+  let {friendsData} = contextData
+  console.log(friendsData)
   return (
     <>
       <div className="my-8 md:my-10 space-y-3 md:space-y-5 text-center md:text-left">
@@ -42,21 +46,32 @@ const TimeLinePage = () => {
       </div>
 
       {/* timeline cards */}
-      <div>
+      <div className="flex flex-col gap-4">
             {/* card */}
-             <div className="border flex gap-5 items-center px-10 py-4">
+            {/*  */}
+             {
+                 friendsData.map((friend, i) =>   <div key={i} className="border rounded-xl flex gap-5 items-center px-10 py-4">
                       <div>
-                             <span><BiPhoneCall size={30} color="black"/></span>
+                        {
+                           friend.clickAction === 'call' ? <span><BiPhoneCall size={30} color="black"/></span>: friend.clickAction === 'text' ? <span><MdOutlineTextsms size={30}/></span> :
+                              <span><IoVideocamOutline size={30} /></span>
+                        }
+                             
                       </div>
-                      <div className="">
+                      <div>
                              <div>
-                                   <span className="light-dark-green font-medium text-xl">meetup</span> <span className="light-blue text-[1.1rem]">with Tom Bake</span>
+                                   <span className="light-dark-green font-medium text-xl">{friend.clickAction}</span> <span className="light-blue text-[1.1rem]">{friend.name}</span>
                              </div>
                              <p className="font-medium light-blue">
-                                 March 29, 2026
+                                 {/* March 29, 2026 */}
+                                 {
+                                  friend.next_due_date
+
+                                 }
                              </p>
                       </div>
-             </div>
+             </div>)
+             }
       </div>
     </>
   );
