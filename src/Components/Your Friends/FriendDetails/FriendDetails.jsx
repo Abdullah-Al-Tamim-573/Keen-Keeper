@@ -58,7 +58,7 @@ const FriendDetails = () => {
 
         {/* 2nd part box */}
 
-        <div className="border w-full">
+        <div className="border w-full flex flex-col gap-4 ">
           {/* status boxes */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {/* 1st box */}
@@ -94,6 +94,23 @@ const FriendDetails = () => {
                 </p>
               </div>
             </div>
+          </div>
+
+          {/* Relationship Goal box */}
+          <div className="border flex justify-between p-6 rounded-xl">
+                <div className="space-y-1">
+                     <h4 className="font-medium text-xl light-dark-green">
+                      Relationship Goal
+                </h4>
+                <p className="light-blue text-[17px]">
+                     Connect every <span className="dark-blue font-bold">30 days</span>
+                </p>
+                </div>
+                <div>
+                     <button className="btn">
+                        Edit 
+                     </button>
+                </div>
           </div>
         </div>
       </section>
