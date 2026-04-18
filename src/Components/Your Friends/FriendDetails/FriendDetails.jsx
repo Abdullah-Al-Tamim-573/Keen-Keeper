@@ -3,6 +3,12 @@ import { useLoaderData, useParams } from "react-router";
 import { RiNotificationSnoozeLine } from "react-icons/ri";
 import { PiArchiveBold } from "react-icons/pi";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { BiPhoneCall } from "react-icons/bi";
+import { MdOutlineTextsms } from "react-icons/md";
+import { IoVideocamOutline } from "react-icons/io5";
+
+
+
 
 const FriendDetails = () => {
   let params = Number(useParams().id);
@@ -14,9 +20,9 @@ const FriendDetails = () => {
     <>
       <section className="my-20 flex gap-5 flex-col lg:flex-row ">
         {/* 1st part box */}
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 items-center">
           {/* 1st box */}
-          <div className="card border w-80 shadow-sm py-7">
+          <div className="card border w-full md:w-80  shadow-sm py-7">
             <figure>
               <img src="Ellipse1.png" alt="Shoes" />
             </figure>
@@ -41,9 +47,9 @@ const FriendDetails = () => {
             </div>
           </div>
           {/* 2nd box */}
-          <div className="card  w-80 shadow-sm ">
+          <div className="card  w-full md:w-80 shadow-sm ">
             <div className="card-body p-0">
-              <p className="font-medium flex justify-center  gap-1   p-4 dark-blue">
+              <p className="font-medium flex justify-center  gap-1 btn  p-4 dark-blue">
                 <RiNotificationSnoozeLine size={17} /> Snooze 2 weeks
               </p>
               <p className="font-medium btn text-center p-4 dark-blue flex justify-center gap-1">
@@ -57,7 +63,6 @@ const FriendDetails = () => {
         </div>
 
         {/* 2nd part box */}
-
         <div className="border w-full flex flex-col gap-4 ">
           {/* status boxes */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -89,28 +94,44 @@ const FriendDetails = () => {
                 <h2 className="text-2xl  light-dark-green text-center font-semibold">
                   Feb 27, 2026
                 </h2>
-                <p className="text-center text-[1rem] light-blue">
-                  Next Due
-                </p>
+                <p className="text-center text-[1rem] light-blue">Next Due</p>
               </div>
             </div>
           </div>
 
           {/* Relationship Goal box */}
           <div className="border flex justify-between p-6 rounded-xl">
-                <div className="space-y-1">
-                     <h4 className="font-medium text-xl light-dark-green">
-                      Relationship Goal
-                </h4>
-                <p className="light-blue text-[17px]">
-                     Connect every <span className="dark-blue font-bold">30 days</span>
-                </p>
-                </div>
-                <div>
-                     <button className="btn">
-                        Edit 
-                     </button>
-                </div>
+            <div className="space-y-1">
+              <h4 className="font-medium text-xl light-dark-green">
+                Relationship Goal
+              </h4>
+              <p className="light-blue text-[17px]">
+                Connect every{" "}
+                <span className="dark-blue font-bold">30 days</span>
+              </p>
+            </div>
+            <div>
+              <button className="btn">Edit</button>
+            </div>
+          </div>
+          {/* Quick Check-In box */}
+          <div className="border p-6 ">
+            <h4 className="text-xl font-medium">Quick Check-In</h4>
+
+            {/* Action Cards box */}
+            <div className="flex gap-2 py-10">
+              <div className="w-full">
+                <button className="btn w-full flex flex-col gap-1 p-5 md:p-7 lg:p-10">
+                    <span><BiPhoneCall size={24} color="black"/></span> Call</button>
+              </div>
+              <div className="w-full">
+                <button className="btn flex flex-col w-full gap-1 p-5 md:p-7 lg:p-10"> <span><MdOutlineTextsms size={24}/></span> Text</button>
+              </div>
+              <div className="w-full">
+                <button className="btn  w-full gap-1 p-5 md:p-7 lg:p-10 flex flex-col">
+                    <span><IoVideocamOutline size={24} /></span> Video</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
