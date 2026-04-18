@@ -19,6 +19,7 @@ const FriendDetails = () => {
 
   let {id, name, picture, email, days_since_contact, goal, next_due_date
 ,status, tags, bio} = findTargetFriend;
+const formattedDate = new Date(next_due_date).toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' });
 
   return (
     <>
@@ -106,7 +107,7 @@ const FriendDetails = () => {
                 <h2 className="text-2xl  light-dark-green text-center font-semibold">
                   {/* Feb 27, 2026 */}
                   {
-                    next_due_date
+                    formattedDate
                   }
                 </h2>
                 <p className="text-center text-[1rem] light-blue">Next Due</p>
