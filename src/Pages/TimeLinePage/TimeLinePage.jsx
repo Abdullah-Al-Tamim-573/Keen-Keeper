@@ -13,7 +13,7 @@ const TimeLinePage = () => {
   return (
     <>
       <div className="my-8 md:my-10 space-y-3 md:space-y-5 text-center md:text-left">
-        <h2 className="dark-blue font-bold  text-4xl lg:text-5xl dark-blue">
+        <h2 className="dark-blue font-bold  text-4xl lg:text-5xl ">
           TimeLine
         </h2>
 
