@@ -1,16 +1,18 @@
-# React + Vite
+1. Project Name - Keen-Keeper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2. Description-
+Keen-Keeper is a friendship management platform that allows users to keep track of all interactions with their friends. Users can keep records of calls, messages, and video calls using this app. Not only the record keeping but it provides an opportunity to filter data based on date and analyze data using charts.
 
-Currently, two official plugins are available:
+3. Technologies used -
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Front-end framework – React
+Styling - Tailwind CSS & Daisy UI
+Routing - React Router 
+Charting Library - Recharts (Pie chart)
+Toast Messages - React Toastify
 
-## React Compiler
+4. Key features of my project
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Interaction Tracking
+Smart Filtering
+Data Analytics

@@ -50,7 +50,8 @@ const StatusPage = () => {
         </div>
       </div>
 
-      <div className="my-10 flex justify-center">
+       {
+          copyArry.length === 0 ? <h4 className="text-xl font-bold text-center">No Interaction Logged Yet</h4>: <div className="my-10 flex justify-center">
 
       <PieChart style={{ width: '100%', maxWidth: '500px', maxHeight: '80vh', aspectRatio: 1 }} responsive>
       <Pie
@@ -71,6 +72,7 @@ const StatusPage = () => {
       
     </PieChart>
       </div>
+       }
     </div>
   );
 };
