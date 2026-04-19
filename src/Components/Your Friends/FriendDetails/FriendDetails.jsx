@@ -22,9 +22,8 @@ const FriendDetails = () => {
   let findTargetFriend = friendsData.find((friend) => friend.id === params);
   
 
-  let {name, picture, email, days_since_contact, goal, next_due_date
-,status, tags, bio} = findTargetFriend;
-const formattedDate = new Date(next_due_date).toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' });
+  let {name, picture, email, days_since_contact, goal,status, tags, bio} = findTargetFriend;
+const formattedDate = new Date().toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' });
 
   return (
     <>
