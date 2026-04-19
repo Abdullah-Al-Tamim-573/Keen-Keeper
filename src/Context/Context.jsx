@@ -39,6 +39,7 @@ export let FriendsDataContext = createContext()
     
 
     let data = {
+        copyArry,
         handleFriendsData,
         friendsData,
         handleFiterOutFriendsActions

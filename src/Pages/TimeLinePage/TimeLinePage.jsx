@@ -84,7 +84,7 @@ const TimeLinePage = () => {
             <div>
               {friend.clickAction === "call" ? (
                 <span>
-                  <BiPhoneCall size={30} color="black" />
+                  <BiPhoneCall size={30} />
                 </span>
               ) : friend.clickAction === "text" ? (
                 <span>
